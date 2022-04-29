@@ -1,15 +1,16 @@
 import express from "express";
+import helmet from "helmet";
 import dotenv from "dotenv";
 import cors from "cors";
 import * as bodyParser from "body-parser";
 
-import { mnemonicMiddleware } from "./middlewares/getMnemonicMiddleware";
+import { router } from "./index";
 
 dotenv.config();
 
 export default () => {
   const app = express();
-
+  app.use(helmet());
   app.use(cors());
   app.use(bodyParser.json());
   app.use(
@@ -17,8 +18,7 @@ export default () => {
       extended: true,
     })
   );
-
-  app.get("/mnemonic", mnemonicMiddleware);
+  app.use(router);
 
   return app;
 };

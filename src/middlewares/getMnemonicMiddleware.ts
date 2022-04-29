@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import * as bip39 from "bip39";
 
-export const getMnemonicMiddleware =
+export const getMnemonicMiddlewareFactory =
   (getMnemicFunction: () => string) =>
   async (
     _request: Request,
@@ -16,4 +16,6 @@ export const getMnemonicMiddleware =
     }
   };
 
-export const mnemonicMiddleware = getMnemonicMiddleware(bip39.generateMnemonic);
+export const getMnemonicMiddleware = getMnemonicMiddlewareFactory(
+  bip39.generateMnemonic
+);

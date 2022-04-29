@@ -1,0 +1,5 @@
+- Add validation to each of the API routes. 
+- Add functional tests to each of the API routes. 
+- Add documentation. 
+- Add unit tests for each of the middle wares.
+- Update READ ME. 
