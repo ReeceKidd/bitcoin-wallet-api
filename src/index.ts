@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { generateAddressMiddleware } from "./middlewares/generateAddressMiddleware";
-import { generateMultiSigAddressMiddleware } from "./middlewares/generateMultiSigAddressMiddleware";
-import { getMnemonicMiddleware } from "./middlewares/getMnemonicMiddleware";
+import { getAddressMiddlewares } from "./middlewares/getAddressMiddlewares/getAddressMiddlewares";
+import { getMnemonicMiddlewares } from "./middlewares/getMnemonicMiddewares/getMnemonicMiddlewares";
+import { getMultiSigAddressMiddlewares } from "./middlewares/getMultiSigAddressMiddlewares/getMultiSigAddressMiddlewares";
 
 export const router = Router();
-router.get("/mnemonic", getMnemonicMiddleware);
-router.get("/address", generateAddressMiddleware);
-router.get("/multi-sig-address", generateMultiSigAddressMiddleware);
+router.get("/mnemonic", ...getMnemonicMiddlewares);
+router.get("/address", ...getAddressMiddlewares);
+router.get("/multi-sig-address", ...getMultiSigAddressMiddlewares);
