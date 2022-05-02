@@ -14,8 +14,8 @@ describe("getAddress", () => {
         `/address?seedPhrase=${mnemonicResponse.text}&derivationPath=${derivationPath}`
       );
       expect(addressResponse.status).toBe(200);
-      expect(addressResponse.text).toBeDefined();
-      expect(addressResponse.text.length).toEqual(42);
+      expect(addressResponse.body.address).toBeDefined();
+      expect(addressResponse.body.address.length).toEqual(42);
     });
   });
 

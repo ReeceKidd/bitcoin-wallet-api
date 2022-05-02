@@ -9,8 +9,8 @@ export const getMnemonicMiddlewareFactory =
     next: NextFunction
   ): Promise<void> => {
     try {
-      const randomMnemonic = getMnemicFunction();
-      response.send(randomMnemonic);
+      const mnemonic = getMnemicFunction();
+      response.send({ mnemonic });
     } catch (err) {
       next(err);
     }

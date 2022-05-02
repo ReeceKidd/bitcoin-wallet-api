@@ -18,7 +18,7 @@ export const getGenerateAddressMiddleware =
       const root = bip32.fromSeed(seed, bitcoin.networks.bitcoin);
       const { publicKey } = root.derivePath(derivationPath as string);
       const address = bitcoin.payments.p2wpkh({ pubkey: publicKey }).address;
-      response.send(address);
+      response.send({ address });
     } catch (err) {
       next(err);
     }

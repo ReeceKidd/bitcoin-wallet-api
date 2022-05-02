@@ -8,9 +8,8 @@ describe("getMnemonic", () => {
     test("sends random mnemonic following BIP39 standard", async () => {
       expect.assertions(2);
       const response = await request(app()).get("/mnemonic");
-      expect(response.text).toBeDefined();
-      expect(response.text.split(" ")).toHaveLength(12);
+      expect(response.body.mnemonic).toBeDefined();
+      expect(response.body.mnemonic.split(" ")).toHaveLength(12);
     });
   });
-
 });

@@ -26,7 +26,7 @@ export const getGenerateMultiSigAddressMiddleware =
           pubkeys,
         }),
       });
-      response.send(address);
+      response.send({ address });
     } catch (err) {
       next(err);
     }

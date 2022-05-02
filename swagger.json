@@ -29,7 +29,19 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "mnemonic": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -55,7 +67,19 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -69,13 +93,13 @@
           {
             "required": true,
             "in": "query",
-            "name": "m",
+            "name": "n",
             "schema": { "type": "integer" }
           },
           {
             "required": true,
             "in": "query",
-            "name": "n",
+            "name": "m",
             "schema": { "type": "integer" }
           },
           {
@@ -88,7 +112,19 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

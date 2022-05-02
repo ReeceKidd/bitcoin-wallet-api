@@ -18,7 +18,7 @@ describe("getMultiSigAddress", () => {
       const url = `/multi-sig-address?n=${n}&m=${m}&publicKeys[]=${publicKeys}`;
       const response = await request(app()).get(url);
       expect(response.status).toBe(200);
-      expect(response.text).toMatch(bitcoinAddressRegex);
+      expect(response.body.address).toMatch(bitcoinAddressRegex);
     });
   });
   describe("errors", () => {
