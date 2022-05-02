@@ -17,21 +17,24 @@ Bitcoin HD and n-out-of-m Multisignature P2SH Address Generator
     yarn  add
 ```    
 
-This project uses bitcoinjs-lib as the core library for generating bitcoin addresses.   
+This project uses bitcoinjs-lib for generating bitcoin addresses.   
 
 ## Usage
+Use the below command to run the node server locally
 ```
-Development
     yarn dev
 ```
 
 ## Documentation
 Documentation is defined inside of swagger.json
-Run yarn dev and go to: 
+To view the documentation run
+```
+    yarn dev
+```
+ and go to: 
 **http://localhost:3001/swagger**
 
 You can also access the hosted service at:
-
 
 ## Testing
 The application has both unit and functional tests. 
@@ -39,9 +42,9 @@ The application has both unit and functional tests.
  yarn test
 ```
 
-
 ## Improvements
 * Add QR codes for address.
 * Support different mnemonic languages
+* Return more derived addresses
 
 
