@@ -19,7 +19,6 @@ Set up the following environment variables in a .env file
 NODE_ENV=test
 
 PORT=3000
-
 ````
 Once your environment variables are set up run
 ```
