@@ -1,12 +1,12 @@
 import { Request, Response, NextFunction } from "express";
 import * as bitcoin from "bitcoinjs-lib";
 import * as bip39 from "bip39";
-import BIP32Factory from "bip32";
+import BIP32Factory, { BIP32API } from "bip32";
 import * as ecc from "tiny-secp256k1";
 const bip32 = BIP32Factory(ecc);
 
 export const getGenerateAddressMiddleware =
-  () =>
+  (bip32: BIP32API) =>
   async (
     request: Request,
     response: Response,
@@ -24,4 +24,4 @@ export const getGenerateAddressMiddleware =
     }
   };
 
-export const generateAddressMiddleware = getGenerateAddressMiddleware();
+export const generateAddressMiddleware = getGenerateAddressMiddleware(bip32);
