@@ -22,7 +22,7 @@ PORT=3000
 ````
 Once your environment variables are set up run
 ```
-    yarn
+yarn
 ```    
 
 This project uses bitcoinjs-lib for generating bitcoin addresses.   
@@ -30,14 +30,14 @@ This project uses bitcoinjs-lib for generating bitcoin addresses.
 ## Usage
 Use the below command to run the node server locally
 ```
-    yarn dev
+yarn dev
 ```
 
 ## Documentation
 Documentation is defined inside of swagger.json
 To view the documentation run
 ```
-    yarn dev
+yarn dev
 ```
  and go to: 
 **http://localhost:3000/swagger**
