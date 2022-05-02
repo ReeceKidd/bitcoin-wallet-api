@@ -3,6 +3,8 @@
 - [Objectives](#objectives)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Documentation](#documentation)
+- [Testing](#testing)
 - [Improvements](#improvements)
 
 
