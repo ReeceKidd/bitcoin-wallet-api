@@ -17,7 +17,7 @@ Set up the following environment variables in a .env file
 ````
 NODE_ENV=test
 
-PORT=3001
+PORT=3000
 
 ````
 Once your environment variables are set up run
@@ -40,9 +40,7 @@ To view the documentation run
     yarn dev
 ```
  and go to: 
-**http://localhost:3001/swagger**
-
-You can also access the hosted service at:
+**http://localhost:3000/swagger**
 
 ## Testing
 The API has both unit and functional tests. 
