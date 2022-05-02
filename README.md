@@ -1,13 +1,47 @@
 # bitcoin-wallet-api
+Bitcoin HD and n-out-of-m Multisignature P2SH Address Generator
 
-A bitcoin wallet API that: 
-
--Generates a random mnemonic words following BIP39 standard 
--Generates a Hierarchical Deterministic (HD) Segregated Witness (SegWit) bitcoin address from a given seed and path 
--Generates an n-out-of-m Multisignature (multi-sig) Pay-To-Script-Hash (P2SH) bitcoin address, where n, m and public keys can be specified 
-You can use any open source library in this project. Please state the major 3rd party libraries you have used in the README documentation and publish your source code on a public repository on GitHub and share the link to us when you finish. 
+- [Objectives](#objectives)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Improvements](#improvements)
 
 
-BIP39: https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki 
-BIP44: https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki 
-Mnemonic Code Converter by iancoleman: https://iancoleman.io/bip39/ 
+## Objectives
+1. Generates a random mnemonic words following BIP39 standard
+2. Generate a Hierarchical Deterministic (HD) Segregated Witness (SegWit) bitcoin address from a given seed and path
+2. Generate an n-out-of-m Multisignature (multi-sig) Pay-To-Script-Hash (P2SH) bitcoin address, where n, m, and addresses can be specified 
+ 
+## Installation
+```
+    yarn  add
+```    
+
+This project uses bitcoinjs-lib as the core library for generating bitcoin addresses.   
+
+## Usage
+```
+Development
+    yarn dev
+```
+
+## Documentation
+Documentation is defined inside of swagger.json
+Run yarn dev and go to: 
+**http://localhost:3001/swagger**
+
+You can also access the hosted service at:
+
+
+## Testing
+The application has both unit and functional tests. 
+```
+ yarn test
+```
+
+
+## Improvements
+* Add QR codes for address.
+* Support different mnemonic languages
+
+
