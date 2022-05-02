@@ -1,5 +1,4 @@
 # bitcoin-wallet-api
-Bitcoin HD and n-out-of-m Multisignature P2SH Address Generator
 
 - [Objectives](#objectives)
 - [Installation](#installation)
@@ -41,6 +40,8 @@ To view the documentation run
 ```
  and go to: 
 **http://localhost:3000/swagger**
+
+
 
 ## Testing
 The API has both unit and functional tests. 
