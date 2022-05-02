@@ -13,8 +13,16 @@ Bitcoin HD and n-out-of-m Multisignature P2SH Address Generator
 2. Generate an n-out-of-m Multisignature (multi-sig) Pay-To-Script-Hash (P2SH) bitcoin address, where n, m, and addresses can be specified 
  
 ## Installation
+Set up the following environment variables in a .env file
+````
+NODE_ENV=test
+
+PORT=3001
+
+````
+Once your environment variables are set up run
 ```
-    yarn  add
+    yarn
 ```    
 
 This project uses bitcoinjs-lib for generating bitcoin addresses.   
@@ -37,7 +45,7 @@ To view the documentation run
 You can also access the hosted service at:
 
 ## Testing
-The application has both unit and functional tests. 
+The API has both unit and functional tests. 
 ```
  yarn test
 ```
